@@ -1,0 +1,361 @@
+package br.senai.sp.jandira.projectprofile.screens
+
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Call
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.StarOutline
+import androidx.compose.material.icons.filled.Whatsapp
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Divider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import br.senai.sp.jandira.projectprofile.R
+
+@Composable
+fun ScreenProfile(modifier: Modifier = Modifier) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    )
+    {
+        Column (
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.White)
+        ){
+            Card (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(290.dp),
+                shape = RoundedCornerShape(bottomEnd = 20.dp, bottomStart = 20.dp)
+            ){
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                ){
+                    Image(
+                        painter = painterResource(
+                            R.drawable.rosa
+                        ),
+                        contentDescription = "",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                    Column (
+                        modifier = Modifier
+                            .fillMaxSize(),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ){
+                        Row (
+                            modifier = Modifier.fillMaxWidth()
+                        ){
+                            Icon(
+                                imageVector = Icons.Default.ArrowBack,
+                                contentDescription = "",
+                                tint = Color.White,
+                                modifier = Modifier.padding(bottom = 10.dp)
+                            )
+
+                            Text(
+                                text = stringResource(R.string.details),
+                                modifier = Modifier
+                                    .padding(start = 150.dp, top = 4.dp),
+                                color = Color.White,
+                                fontWeight = FontWeight.Bold
+                            )
+
+
+                        }
+
+
+                        Card (
+                            modifier = Modifier
+                                .size(100.dp),
+                            shape = CircleShape,
+                            colors = CardDefaults.cardColors(
+                                containerColor = Color.Transparent
+                            )
+                        ){
+                            Image(
+                                painter = painterResource(
+                                    R.drawable.perfil
+                                ),
+                                contentDescription = ""
+                            )
+                        }
+                        Text(text = stringResource(R.string.nome_usuario),
+                            color = Color(0xFFE70087),
+                            fontWeight = FontWeight.Bold)
+
+
+                        Text(
+                            text = stringResource(R.string.profissao),
+
+                            color = Color.White,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Row (
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 20.dp, start = 10.dp, end = 10.dp, bottom = 20.dp)
+                                .height(60.dp),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ){
+                            Card (
+                                modifier = Modifier.fillMaxHeight().width(80.dp)
+                                    .border(2.dp, Color(0xFFFF00A1), shape = RoundedCornerShape(15.dp)),
+                                shape = RoundedCornerShape(15.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = Color(0x3EFF008C)
+                                )
+                            ){
+                                Column (
+                                    modifier = Modifier.fillMaxSize(),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center
+                                ){
+                                    Icon(imageVector = Icons.Default.Email,
+                                        contentDescription = "",
+                                        tint = Color.LightGray)
+                                    Text(text = "Email")
+                                }
+                            }
+                            Card (
+                                modifier = Modifier.fillMaxHeight().width(80.dp)
+                                    .border(2.dp, Color(0xFFFF00A1), shape = RoundedCornerShape(15.dp)),
+                                shape = RoundedCornerShape(15.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = Color(0x3EFF008C)
+                                )
+                            ){
+                                Column (
+                                    modifier = Modifier.fillMaxSize(),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center
+                                ){
+                                    Icon(imageVector = Icons.Default.Email,
+                                        contentDescription = "",
+                                        tint = Color.LightGray)
+                                    Text(text = "Email")
+                                }
+                            }
+                            Card (
+                                modifier = Modifier.fillMaxHeight().width(80.dp)
+                                    .border(2.dp, Color(0xFFFF00A1), shape = RoundedCornerShape(15.dp)),
+                                shape = RoundedCornerShape(15.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = Color(0x3EFF008C)
+                                )
+                            ){
+                                Column (
+                                    modifier = Modifier.fillMaxSize(),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center
+                                ){
+                                    Icon(imageVector = Icons.Default.Email,
+                                        contentDescription = "",
+                                        tint = Color.LightGray)
+                                    Text(text = "Email")
+                                }
+                            }
+                            Card (
+                                modifier = Modifier.fillMaxHeight().width(80.dp)
+                                    .border(2.dp, Color(0xFFFF00A1), shape = RoundedCornerShape(15.dp)),
+                                shape = RoundedCornerShape(15.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = Color(0x3EFF008C)
+                                )                            ){
+                                Column (
+                                    modifier = Modifier.fillMaxSize(),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center
+                                ){
+                                    Icon(imageVector = Icons.Default.Email,
+                                        contentDescription = "",
+                                        tint = Color.LightGray)
+                                    Text(text = "Email")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            Column (
+                modifier = Modifier.padding(start = 5.dp, end = 5.dp, top =  5.dp)
+                    .background(Color(0x17EC0984))
+            ){
+                Spacer(modifier = Modifier.height(15.dp))
+
+                Row {
+                    Icon(
+                        imageVector = Icons.Default.Email,
+                        contentDescription = "",
+                        tint = Color(0xE4EC0984)
+                    )
+                    Text(text = "Email")
+                }
+                Column (
+                    modifier = Modifier.padding(start = 23.dp)
+                ){
+                    Text(text = "Official")
+                    Spacer(modifier = Modifier.height(3.dp))
+                    Text(text = "lauren.swan@example.com")
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text(text = "Personal")
+                    Spacer(modifier = Modifier.height(3.dp))
+                    Text(text = "lauren@example.com")
+                }
+
+                Spacer(modifier = Modifier.height(15.dp))
+
+                Divider(
+                    modifier = Modifier
+                        .padding(start = 10.dp, end = 10.dp)
+                        .height(1.dp)
+                        .width(370.dp),
+                    color = Color(0xffFFC23D)
+                )
+
+                Spacer(modifier = Modifier.height(15.dp))
+
+                Row {
+                    Icon(
+                        imageVector = Icons.Default.Email,
+                        contentDescription = "",
+                        tint = Color(0xE4EC0984)
+                    )
+                    Text(text = "Phone number")
+                }
+                Text(text = "Official")
+                Text(text = "lauren.swan@example.com")
+                Text(text = "Personal")
+                Text(text = "lauren@example.com")
+
+                Spacer(modifier = Modifier.height(15.dp))
+
+                Divider(
+                    modifier = Modifier
+                        .padding(start = 10.dp, end = 10.dp)
+                        .height(1.dp)
+                        .width(370.dp),
+                    color = Color(0xffFFC23D)
+                )
+
+                Spacer(modifier = Modifier.height(15.dp))
+
+                Row {
+                    Icon(
+                        imageVector = Icons.Default.Email,
+                        contentDescription = "",
+                        tint = Color(0xE4673AB7)
+                    )
+                    Text(text = "Team")
+                }
+                Text(text = "Official")
+                Text(text = "lauren.swan@example.com")
+                Text(text = "Personal")
+                Text(text = "lauren@example.com")
+
+                Spacer(modifier = Modifier.height(15.dp))
+
+                Divider(
+                    modifier = Modifier
+                        .padding(start = 10.dp, end = 10.dp)
+                        .height(1.dp)
+                        .width(370.dp),
+                    color = Color(0xffFFC23D)
+                )
+
+                Spacer(modifier = Modifier.height(15.dp))
+
+                Row {
+                    Icon(
+                        imageVector = Icons.Default.Email,
+                        contentDescription = "",
+                        tint = Color(0xE4673AB7)
+                    )
+                    Text(text = "Leads by")
+                }
+                Text(text = "Official")
+                Text(text = "lauren.swan@example.com")
+                Text(text = "Personal")
+                Text(text = "lauren@example.com")
+
+                Spacer(modifier = Modifier.height(15.dp))
+
+                Divider(
+                    modifier = Modifier
+                        .padding(start = 10.dp, end = 10.dp)
+                        .height(1.dp)
+                        .width(370.dp),
+                    color = Color(0xffFFC23D)
+                )
+
+                Spacer(modifier = Modifier.height(15.dp))
+            }
+        }
+    }
+}
+    /*{
+        Column (
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.White),
+            horizontalAlignment = Alignment.Start
+        ){
+            Card (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp),
+                shape = RoundedCornerShape(
+                    bottomEnd = 20.dp,
+                    bottomStart = 20.dp
+                ),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(0xff4B0082)
+                )
+            ){
+
+            }
+            Icon(imageVector = Icons.Default.Email,
+                contentDescription = "",
+                tint = Color.Cyan)
+        }
+    }*/
+
+@Preview
+@Composable
+private fun ScreenProfilePreview() {
+    ScreenProfile()
+}
